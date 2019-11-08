@@ -1,0 +1,12 @@
+[submodule "beets-copyartifacts"]
+	path = beets-copyartifacts
+	url = https://github.com/ybnd/beets-copyartifacts/tree/d0bb75c8fc8fe125e8191d73de7ade6212aec0fd
+[submodule "beets-alternatives"]
+	path = beets-alternatives
+	url = https://github.com/geigerzaehler/beets-alternatives/tree/a01d5d6b51ef0c70dd43c9c376fdc4080425ba71/beetsplug
+[submodule "beets-splits"]
+	path = beets-splits
+	url = https://github.com/ybnd/beets-splits
+[submodule "beets-setlister"]
+	path = beets-setlister
+	url = https://github.com/ybnd/beets-setlister

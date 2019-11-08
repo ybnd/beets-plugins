@@ -1,0 +1,3 @@
+#!/bin/bash
+
+beet -c /home/ybnd/code/beets/config.yaml -l /home/ybnd/code/beets/library/library.db $@

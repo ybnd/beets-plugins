@@ -1,0 +1,70 @@
+directory: /mnt/hdd0/media/music
+library: /mnt/hdd0/media/music/.beet.db
+
+original_year: yes
+
+paths:
+    default: $albumartist/%if{$original_year,$original_year,$year} - $album%aunique{}/$track $title
+    singleton: $artist/singles/%if{$original_year,$original_year,$year} - $title
+    comp: collaborations/%if{$original_year,$original_year,$year} - $albumartist - $album%aunique{}/$track $artist - $title
+    albumtype:live: $albumartist/live/%if{$original_year,$original_year,$year} - $album%aunique{}/$track $title
+    albumtype:soundtrack: soundtracks/%if{$original_year,$original_year,$year} - $albumartist - $album/$track $title
+    albumtype:single: $albumartist/singles/%if{$original_year,$original_year,$year} - $album%aunique{}/$track $title
+    albumtype:demo: $albumartist/demos/%if{$original_year,$original_year,$year} - $album%aunique{}/$track $title    
+    albumtype:remix: $albumartist/remixes/%if{$original_year,$original_year,$year} - $album%aunique{}/$track $title
+    albumtype:stuff: $albumartist/stuff/%if{$original_year,$original_year,$year} - $album%aunique{}/$track $title
+    albumtype:anime: anime/$franchise/%if{$original_year,$original_year,$year} - $album/$track $title
+
+pluginpath:
+    - ~/code/beets/beets-copyartifacts/build/lib/beetsplug
+    - ~/code/beets/beets-setlister/beetsplug
+
+plugins: discogs missing fetchart embedart info types duplicates edit copyartifacts smartplaylist fromfilename play importfeeds setlister
+
+play:
+    command: audacious -m
+    raw: yes
+    warning_threshold: 1000
+    use_folders: yes
+
+importfeeds:
+    formats: m3u
+    relative_to: /mnt/hdd0/media/music/playlists
+    dir: ~/media/music/playlists
+
+setlister:
+    playlist_dir: ~/media/music/playlists/setlists
+
+
+copyartifacts:
+    extensions: .jpg .png .pdf .log
+
+smartplaylist:
+    relative_to: /mnt/hdd0/media/music/playlists
+    playlist_dir: ~/media/music/playlists
+    playlists:
+        - name: K-On! BGM.m3u
+          query: 'artist:百石元 k-on sound track year+'
+        - name: Little With Academia BGM.m3u
+          query: 'artist:大島ミチル 『リトルウィッチアカデミア』サウンドトラック集'
+
+
+fetchart:
+    minwidth: 600
+    enforce_ratio: 10%
+
+replace:
+    '^\.': _
+    '[\x00-\x1f]': _
+    '[<>"\*\|\\]': '_'
+    ':': '-'
+    '\?': '_'
+    '\.$': '.'
+    '\s+$': ''
+    '^\s+': ''
+    '^-': '_'
+
+aunique:
+    keys: albumartist album
+    disambiguators: albumdisambig country albumtype year label catalognum releasegroupdisambig
+    bracket: '()'

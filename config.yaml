@@ -6,7 +6,7 @@ original_year: yes
 paths:
     default: $albumartist/%if{$original_year,$original_year,$year} - $album%aunique{}/$track $title
     singleton: $artist/singles/%if{$original_year,$original_year,$year} - $title
-    comp: collaborations/%if{$original_year,$original_year,$year} - $albumartist - $album%aunique{}/$track $artist - $title
+    comp: compilations/%if{$original_year,$original_year,$year} - $albumartist - $album%aunique{}/$track $artist - $title
 
 pluginpath:
     - ~/code/beets/beets-copyartifacts/build/lib/beetsplug

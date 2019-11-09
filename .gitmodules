@@ -10,3 +10,6 @@
 [submodule "beets-setlister"]
 	path = beets-setlister
 	url = https://github.com/ybnd/beets-setlister
+[submodule "beets-link"]
+	path = beets-link
+	url = https://github.com/ybnd/beets-link

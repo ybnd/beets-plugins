@@ -11,9 +11,9 @@ paths:
 pluginpath:
     - ~/code/beets/beets-copyartifacts/build/lib/beetsplug
     - ~/code/beets/beets-setlister/beetsplug
-    - ~/code/beets/beets-splits/beetsplug
+    - ~/code/beets/beets-link/beetsplug
 
-plugins: discogs missing embedart info types duplicates edit fromfilename
+plugins: discogs missing embedart info types duplicates edit fromfilename copyartifacts link # setlister 
 
 replace:
     '^\.': _

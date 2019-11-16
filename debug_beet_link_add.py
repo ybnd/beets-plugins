@@ -6,6 +6,6 @@ if __name__ == "__main__":
         [
             '-c', 'config.yaml',
             '-l', 'library/library.db',
-            'link', 'add'
+            'link', '--add'
         ]
     )

@@ -10,3 +10,6 @@
 [submodule "beets-link"]
 	path = beets-link
 	url = https://github.com/ybnd/beets-link
+[submodule "beets"]
+	path = beets
+	url = https://github.com/ybnd/beets

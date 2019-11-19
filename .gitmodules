@@ -13,3 +13,9 @@
 [submodule "beets"]
 	path = beets
 	url = https://github.com/ybnd/beets
+[submodule "beets-follow"]
+	path = beets-follow
+	url = https://github.com/nolsto/beets-follow
+[submodule "beets-romaji"]
+	path = beets-romaji
+	url = https://github.com/ybnd/beets-romaji	

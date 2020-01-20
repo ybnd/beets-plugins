@@ -1,6 +1,7 @@
 directory: ~/code/beets/library
 library: ~/code/beets/library/library.db
 
+threaded: no
 original_year: yes
 
 paths:
@@ -13,7 +14,7 @@ pluginpath:
     - ~/code/beets/beets-setlister/beetsplug
     - ~/code/beets/beets-link/beetsplug
 
-plugins: discogs missing embedart info types duplicates edit fromfilename copyartifacts link # setlister 
+plugins: discogs missing embedart info types duplicates edit fromfilename copyartifacts link setlister
 
 replace:
     '^\.': _
@@ -30,3 +31,7 @@ aunique:
     keys: albumartist album
     disambiguators: albumdisambig country albumtype year label catalognum releasegroupdisambig
     bracket: '()'
+
+setlister:
+    playlist_dir: ~/code/beets/library
+    api_key: UdgWf-HnBCKdFfmpJnA7OgxaxVhPOmbC0Qi9

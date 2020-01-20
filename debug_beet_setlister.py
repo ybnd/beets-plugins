@@ -5,7 +5,6 @@ if __name__ == "__main__":
     main(
         [
             '-c', 'config.yaml',
-            '-l', 'library/library.db',
             'setlister', 'Rosetta'
         ]
     )

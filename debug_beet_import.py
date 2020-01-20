@@ -5,15 +5,19 @@ from beets.ui import main
 
 if __name__ == "__main__":
     try:
-        shutil.rmtree('library/Elder')
-        main(['update'])
+        shutil.rmtree('library/soundtracks/2010 - S.E.N.S. Project - 君に届け オリジナル・サウンドトラック')
+        main(
+            [
+                '-c', 'config.yaml',
+                'update'
+            ]
+        )
     except FileNotFoundError:
         pass
 
     main(
         [
             '-c', 'config.yaml',
-            '-l', 'library/library.db',
             'import', 'import'
         ]
     )

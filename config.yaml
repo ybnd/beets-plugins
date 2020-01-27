@@ -14,7 +14,10 @@ pluginpath:
     - ~/code/beets/beets-setlister/beetsplug
     - ~/code/beets/beets-link/beetsplug
 
-plugins: discogs missing embedart info types duplicates edit fromfilename copyartifacts link setlister
+plugins: discogs missing embedart info types duplicates edit fromfilename copyartifacts link setlister replaygain
+
+replaygain:
+    backend: ffmpeg
 
 replace:
     '^\.': _

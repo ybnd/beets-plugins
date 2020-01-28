@@ -4,7 +4,7 @@ from beets.ui import main
 if __name__ == "__main__":
     main(
         [
-            '-c', 'config.yaml', '-vv',
-            'replaygain', '-wf', '-j', '8',
+            '-c', 'config.yaml',
+            'info', 'unhearing'
         ]
     )

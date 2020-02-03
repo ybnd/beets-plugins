@@ -1,0 +1,15 @@
+[submodule "beets"]
+	path = beets
+	url = https://github.com/ybnd/beets
+[submodule "beets-setlister"]
+	path = beets-setlister
+	url = https://github.com/ybnd/beets-setlister
+[submodule "beets-follow"]
+	path = beets-follow
+	url = https://github.com/ybnd/beets-follow
+[submodule "beets-link"]
+	path = beets-link
+	url = https://github.com/ybnd/beets-link
+[submodule "beets-romaji"]
+	path = beets-romaji
+	url = https://github.com/ybnd/beets-romaji

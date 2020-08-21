@@ -1,12 +1,15 @@
 from __future__ import division, absolute_import, print_function
 from beets.ui import main
+import time
 
 if __name__ == "__main__":
+    t = time.time()
+
     main(
         [
             '-c', 'config.yaml', '-vv',
-            'modify', '-y',
-            'rg_album_gain=""', 'rg_album_peak=""',
-            'rg_track_gain=""', 'rg_track_peak=""',
+            'convert'
         ]
     )
+
+    print(f"\n\n Elapsed time: {time.time() - t} s.")

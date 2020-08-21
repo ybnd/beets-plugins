@@ -5,6 +5,6 @@ if __name__ == "__main__":
     main(
         [
             '-c', 'config.yaml',
-            'info', 'floatfall'
+            'ls', '-af', '$album:$albumtotal', 'botanist'
         ]
     )

@@ -1,6 +1,6 @@
 # notes
 
-## debugging beet in PyCharm
+### debugging `beet` in PyCharm
 
 * Install `beet` in ‘editable mode’: `pip install -e ./beets`
 
@@ -15,9 +15,5 @@
     ![image-20200120205408117](.assets/image-20200120205408117.png)
 
   * For some reason, nothing works when executing with ‘Run’…
-
-
-## beets-link
-
 
 

@@ -1,7 +1,8 @@
 directory: ~/code/beets/library
 library: ~/code/beets/library/library.db
 
-threaded: no
+threaded: yes
+parallel_threads: 12
 original_year: yes
 
 paths:
@@ -11,13 +12,18 @@ paths:
 
 pluginpath:
     - ~/code/beets/beets-copyartifacts/build/lib/beetsplug
-    - ~/code/beets/beets-setlister/beetsplug
     - ~/code/beets/beets-link/beetsplug
 
-plugins: discogs missing embedart info types duplicates edit fromfilename copyartifacts link setlister replaygain
-
+plugins: discogs convert missing embedart info types duplicates edit fromfilename copyartifacts link replaygain lyrics
 replaygain:
+#    backend: command
     backend: ffmpeg
+#    backend: bs1770gain
+#    backend: gstreamer
+#    backend: audiotools
+
+convert:
+    dest: library/converted
 
 replace:
     '^\.': _
@@ -34,7 +40,3 @@ aunique:
     keys: albumartist album
     disambiguators: albumdisambig country albumtype year label catalognum releasegroupdisambig
     bracket: '()'
-
-setlister:
-    playlist_dir: ~/code/beets/library
-    api_key: UdgWf-HnBCKdFfmpJnA7OgxaxVhPOmbC0Qi9

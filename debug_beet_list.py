@@ -4,7 +4,6 @@ from beets.ui import main
 if __name__ == "__main__":
     main(
         [
-            '-c', 'config.yaml',
-            'info', 'floatfall'
+            '-c', 'config.yaml', 'ls'
         ]
     )

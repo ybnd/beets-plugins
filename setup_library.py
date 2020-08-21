@@ -7,16 +7,23 @@ import os
 if __name__ == '__main__':
     try:
         shutil.rmtree('library')
+        while os.path.isdir('library'):
+            pass # todo: sometimes the dir gets removed *after* it is made!
+        # todo: this still doesn't catch it, need to run this script twice...
         main(
             [
                 '-c', 'config.yaml',
-                'update'
+                'update', '--from-scratch'
             ]
         )
     except FileNotFoundError:
         pass
 
-    os.mkdir('library')
+    if not os.path.isdir('library'):
+        os.mkdir('library')
+        # touch ~ https://stackoverflow.com/questions/1158076/implement-touch-using-python
+        with open('library/library.db', 'a'):
+            os.utime('library/library.db', None)
 
     main(
         [

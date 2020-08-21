@@ -5,8 +5,6 @@ if __name__ == "__main__":
     main(
         [
             '-c', 'config.yaml', '-vv',
-            'modify', '-y',
-            'rg_album_gain=""', 'rg_album_peak=""',
-            'rg_track_gain=""', 'rg_track_peak=""',
+            'lyrics', '--force', '--write-rest', 'lyrics'
         ]
     )
